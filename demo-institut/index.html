@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Écrin de Jade — Institut de beauté à Bordeaux</title>
+<meta name="description" content="Institut de beauté au cœur de Bordeaux : soins du visage, massages, épilation, onglerie. Un moment pour vous, dans un écrin de douceur. Réservation par téléphone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+  :root {
+    --porcelain: #FBF8F3;
+    --panel: #FFFFFF;
+    --jade: #5E7A6A;
+    --jade-deep: #465D50;
+    --jade-soft: #E9EFEA;
+    --ink: #2E3530;
+    --ink-2: #5C665F;
+    --line: #E5DFD4;
+    --rose: #C99A92;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--porcelain); color: var(--ink); font-family: "Jost", system-ui, sans-serif; font-weight: 300; font-size: 17px; line-height: 1.65; }
+  h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; line-height: 1.15; text-wrap: balance; }
+  h2 { font-size: clamp(1.9rem, 4.5vw, 2.6rem); margin-bottom: 12px; }
+  p { margin-bottom: 12px; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 22px; }
+  section { padding: 76px 0; }
+  .kicker {
+    font-size: .72rem; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--jade); font-weight: 500; margin-bottom: 14px;
+  }
+  .center { text-align: center; }
+  .btn {
+    display: inline-block; text-decoration: none; text-align: center;
+    font-weight: 500; letter-spacing: .06em; font-size: .95rem;
+    padding: 13px 30px; border-radius: 2px;
+  }
+  .btn-jade { background: var(--jade); color: #fff; }
+  .btn-jade:hover { background: var(--jade-deep); }
+  .btn-line { border: 1px solid var(--jade); color: var(--jade); }
+  .btn-line:hover { background: var(--jade-soft); }
+
+  header.top {
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(251,248,243,.94); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .top-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 22px; max-width: 1000px; margin: 0 auto; }
+  .brand { font-family: "Cormorant Garamond", serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: .04em; }
+  .brand em { font-style: italic; color: var(--jade); }
+  nav.menu { display: flex; gap: 22px; font-size: .88rem; letter-spacing: .08em; text-transform: uppercase; }
+  nav.menu a { color: var(--ink-2); text-decoration: none; }
+  nav.menu a:hover { color: var(--jade); }
+  @media (max-width: 720px) { nav.menu { display: none; } }
+
+  .hero { position: relative; min-height: 74vh; display: grid; place-items: center; overflow: hidden; padding: 90px 22px; }
+  .hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,38,33,.25), rgba(30,38,33,.55)); }
+  .hero-in { position: relative; z-index: 2; text-align: center; color: #fff; max-width: 640px; }
+  .hero-in .kicker { color: #DCE7DF; }
+  .hero-in h1 { font-size: clamp(2.6rem, 7vw, 4.2rem); font-weight: 500; }
+  .hero-in h1 em { font-style: italic; }
+  .hero-in p { color: #E8EDE9; font-size: 1.12rem; margin: 16px auto 26px; max-width: 46ch; }
+
+  .intro p { font-size: 1.15rem; max-width: 58ch; margin: 0 auto; color: var(--ink-2); }
+  .intro .sig { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.2rem; color: var(--jade); margin-top: 18px; }
+
+  .soins { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .carte { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 60px; margin-top: 40px; }
+  @media (max-width: 780px) { .carte { grid-template-columns: 1fr; } }
+  .cat h3 {
+    font-size: 1.35rem; color: var(--jade-deep); margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  .soin { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 7px 0; }
+  .soin .n { font-weight: 400; }
+  .soin .n small { display: block; font-size: .82rem; color: var(--ink-2); }
+  .soin .dots { flex: 1; border-bottom: 1px dotted var(--line); transform: translateY(-4px); }
+  .soin .p { font-weight: 500; color: var(--jade-deep); white-space: nowrap; font-size: .95rem; }
+
+  .rituels { }
+  .rituel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+  @media (max-width: 720px) { .rituel-grid { grid-template-columns: 1fr; } }
+  .rituel { background: var(--panel); border: 1px solid var(--line); padding: 34px; text-align: center; }
+  .rituel .duree { font-size: .75rem; letter-spacing: .22em; text-transform: uppercase; color: var(--rose); margin-bottom: 10px; }
+  .rituel h3 { font-size: 1.5rem; margin-bottom: 10px; }
+  .rituel p { font-size: .95rem; color: var(--ink-2); }
+  .rituel .prix { font-family: "Cormorant Garamond", serif; font-size: 1.7rem; color: var(--jade-deep); margin-top: 14px; }
+
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  @media (max-width: 780px) { .duo { grid-template-columns: 1fr; } }
+  .duo img { width: 100%; height: 100%; max-height: 430px; object-fit: cover; display: block; }
+  .duo .kicker { margin-bottom: 10px; }
+  .duo p { color: var(--ink-2); }
+
+  .avis-strip { background: var(--jade); color: #fff; padding: 64px 0; }
+  .avis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
+  .avis { text-align: center; }
+  .avis .stars { color: #E9D8A6; letter-spacing: 3px; margin-bottom: 12px; }
+  .avis p { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.15rem; color: #EDF2EE; }
+  .avis b { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; color: #C6D4CA; }
+  .avis-strip h2 { color: #fff; }
+  .avis-strip .kicker { color: #C6D4CA; }
+
+  .infos { }
+  .infos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 34px; }
+  .info { background: var(--panel); border: 1px solid var(--line); padding: 28px; }
+  .info h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--jade-deep); }
+  .info p { font-size: .95rem; color: var(--ink-2); margin-bottom: 6px; }
+  .info a { color: var(--jade-deep); }
+
+  footer { border-top: 1px solid var(--line); padding: 30px 0; font-size: .85rem; color: var(--ink-2); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 30px; justify-content: space-between; }
+  .demo-note { background: var(--ink); color: #A9B4AC; text-align: center; font-size: .8rem; padding: 10px 16px; }
+  .demo-note a { color: #E9D8A6; font-weight: 500; }
+  :focus-visible { outline: 3px solid var(--jade); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#">L'Écrin <em>de Jade</em></a>
+    <nav class="menu" aria-label="Navigation principale">
+      <a href="#soins">La carte</a>
+      <a href="#rituels">Rituels</a>
+      <a href="#institut">L'institut</a>
+      <a href="#infos">Infos</a>
+    </nav>
+    <a class="btn btn-jade" href="tel:+33599004412">Réserver</a>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="bg" src="assets/hero.jpg" alt="Cabine de soin de l'institut, ambiance douce aux tons sauge et crème">
+  <div class="hero-in">
+    <p class="kicker">Institut de beauté · Bordeaux</p>
+    <h1>Un moment rien qu'à <em>vous</em></h1>
+    <p>Soins du visage, massages et rituels d'exception au cœur des Chartrons, dans un écrin pensé pour la douceur.</p>
+    <a class="btn btn-jade" href="tel:+33599004412">Réserver au 05 99 00 44 12</a>
+  </div>
+</div>
+
+<section class="intro center wrap">
+  <p class="kicker">La maison</p>
+  <h2>La beauté comme un art de vivre</h2>
+  <p>Depuis 2019, L'Écrin de Jade cultive une idée simple : un soin réussi commence par le temps qu'on vous consacre. Ici, pas de cadence — chaque rendez-vous commence par une écoute, se poursuit dans le calme, et se termine par une infusion.</p>
+  <p class="sig">Camille &amp; Élise, fondatrices</p>
+</section>
+
+<section class="soins" id="soins">
+  <div class="wrap">
+    <div class="center">
+      <p class="kicker">La carte des soins</p>
+      <h2>Nos soins, nos prix, sans surprise</h2>
+    </div>
+    <div class="carte">
+      <div class="cat">
+        <h3>Visage</h3>
+        <div class="soin"><span class="n">Soin coup d'éclat<small>Nettoyage, gommage, masque — 30 min</small></span><span class="dots"></span><span class="p">45 €</span></div>
+        <div class="soin"><span class="n">Soin signature Jade<small>Protocole complet et massage kobido — 1 h 15</small></span><span class="dots"></span><span class="p">89 €</span></div>
+        <div class="soin"><span class="n">Soin jeune peau<small>Purifiant, adapté aux peaux à imperfections — 45 min</small></span><span class="dots"></span><span class="p">55 €</span></div>
+      </div>
+      <div class="cat">
+        <h3>Massages</h3>
+        <div class="soin"><span class="n">Massage relaxant<small>Huiles chaudes, pressions douces — 1 h</small></span><span class="dots"></span><span class="p">70 €</span></div>
+        <div class="soin"><span class="n">Massage profond<small>Tensions ciblées, dos et épaules — 1 h</small></span><span class="dots"></span><span class="p">78 €</span></div>
+        <div class="soin"><span class="n">Futurs mamans<small>À partir du 4ᵉ mois — 50 min</small></span><span class="dots"></span><span class="p">72 €</span></div>
+      </div>
+      <div class="cat">
+        <h3>Épilation</h3>
+        <div class="soin"><span class="n">Sourcils ou lèvre</span><span class="dots"></span><span class="p">12 €</span></div>
+        <div class="soin"><span class="n">Demi-jambes</span><span class="dots"></span><span class="p">24 €</span></div>
+        <div class="soin"><span class="n">Maillot (échancré / intégral)</span><span class="dots"></span><span class="p">28 / 38 €</span></div>
+        <div class="soin"><span class="n">Forfait jambes complètes + maillot + aisselles</span><span class="dots"></span><span class="p">62 €</span></div>
+      </div>
+      <div class="cat">
+        <h3>Mains &amp; regard</h3>
+        <div class="soin"><span class="n">Manucure soignée<small>Avec pose de vernis classique</small></span><span class="dots"></span><span class="p">35 €</span></div>
+        <div class="soin"><span class="n">Semi-permanent<small>Pose ou dépose comprise</small></span><span class="dots"></span><span class="p">45 €</span></div>
+        <div class="soin"><span class="n">Teinture cils ou sourcils</span><span class="dots"></span><span class="p">22 €</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rituels wrap" id="rituels">
+  <div class="center">
+    <p class="kicker">Nos signatures</p>
+    <h2>Deux rituels d'exception</h2>
+  </div>
+  <div class="rituel-grid">
+    <div class="rituel">
+      <p class="duree">2 h — l'échappée</p>
+      <h3>Rituel Jade Impérial</h3>
+      <p>Gommage corps aux sels fins, massage aux pierres de jade chauffées, soin du visage signature. Notre soin le plus demandé.</p>
+      <div class="prix">139 €</div>
+    </div>
+    <div class="rituel">
+      <p class="duree">2 h 30 — à deux</p>
+      <h3>Parenthèse Duo</h3>
+      <p>Cabine double, massage relaxant en simultané, soin visage éclat et infusion gourmande à partager. Le cadeau parfait.</p>
+      <div class="prix">225 € pour deux</div>
+    </div>
+  </div>
+</section>
+
+<section class="soins" id="institut">
+  <div class="wrap duo">
+    <img src="assets/soin.jpg" alt="Soin du visage en cabine, gestes précis d'une esthéticienne">
+    <div>
+      <p class="kicker">L'institut</p>
+      <h2>Des mains expertes, des produits choisis</h2>
+      <p>Nos deux esthéticiennes diplômées cumulent quinze ans d'expérience en institut et en spa hôtelier. Nous travaillons exclusivement avec des gammes professionnelles françaises, naturelles à plus de 95 %, sélectionnées pour leur efficacité et leur douceur.</p>
+      <p>Chaque protocole est adapté à votre peau le jour même — parce qu'elle change, nos soins aussi.</p>
+      <a class="btn btn-line" href="#infos">Venir nous rencontrer</a>
+    </div>
+  </div>
+</section>
+
+<div class="avis-strip">
+  <div class="wrap">
+    <div class="center">
+      <p class="kicker">Livre d'or</p>
+      <h2>Elles en parlent mieux que nous</h2>
+    </div>
+    <div class="avis-grid">
+      <div class="avis"><div class="stars">★★★★★</div><p>« Le rituel Jade Impérial est une parenthèse hors du temps. Deux heures où plus rien n'existe. »</p><b>Margaux L.</b></div>
+      <div class="avis"><div class="stars">★★★★★</div><p>« Enfin un institut où l'on ne regarde pas la montre. Accueil adorable, soin du visage exceptionnel. »</p><b>Sophie D.</b></div>
+      <div class="avis"><div class="stars">★★★★★</div><p>« J'ai offert la Parenthèse Duo à ma mère. Nous en reparlons encore. Merci Camille ! »</p><b>Inès B.</b></div>
+    </div>
+  </div>
+</div>
+
+<section class="infos wrap" id="infos">
+  <div class="center">
+    <p class="kicker">Infos pratiques</p>
+    <h2>Venir à l'institut</h2>
+  </div>
+  <div class="infos-grid">
+    <div class="info">
+      <h3>Horaires</h3>
+      <p>Mardi – vendredi : 9 h 30 – 19 h</p>
+      <p>Samedi : 9 h – 18 h</p>
+      <p>Dimanche &amp; lundi : fermé</p>
+    </div>
+    <div class="info">
+      <h3>Adresse</h3>
+      <p>8 rue des Argentiers<br>33000 Bordeaux — quartier des Chartrons</p>
+      <p>Tram B, arrêt Chartrons · arceaux vélo devant l'institut</p>
+    </div>
+    <div class="info">
+      <h3>Réservation</h3>
+      <p><a href="tel:+33599004412">05 99 00 44 12</a></p>
+      <p>bonjour@ecrindejade.fr</p>
+      <p>Cartes cadeaux disponibles à l'institut et par téléphone.</p>
+    </div>
+  </div>
+  <p class="center" style="margin-top: 34px;"><a class="btn btn-jade" href="tel:+33599004412">Réserver mon moment</a></p>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 L'Écrin de Jade — Bordeaux</span>
+    <span>SIRET 842 517 936 00021</span>
+  </div>
+</footer>
+<div class="demo-note">Site fictif de démonstration — réalisé par <a href="../">Vitrine48h</a> · votre site comme celui-ci : 249 €, livré en 48 h</div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voltéo Électricité — Électricien certifié à Nantes</title>
+<meta name="description" content="Électricien à Nantes : mise aux normes, dépannage, tableau électrique, domotique, borne de recharge. Devis clair sous 24 h, travaux garantis. Intervention Nantes métropole.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  :root {
+    --bg: #14181F;
+    --panel: #1B212B;
+    --panel-2: #222A36;
+    --amber: #F2A93B;
+    --amber-deep: #D8912A;
+    --ink: #EDF0F4;
+    --ink-2: #A6B0BE;
+    --ink-3: #6E7988;
+    --line: #2C3542;
+    --ok: #7FC79A;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 17px; line-height: 1.6; }
+  h1, h2, h3 { font-family: "Sora", sans-serif; line-height: 1.15; text-wrap: balance; }
+  h2 { font-size: clamp(1.6rem, 4vw, 2.1rem); font-weight: 700; margin-bottom: 12px; }
+  p { margin-bottom: 12px; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 68px 0; }
+  .kicker {
+    font-family: "Sora", sans-serif; font-size: .72rem; font-weight: 600;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px;
+  }
+  .btn {
+    display: inline-block; text-decoration: none; text-align: center;
+    font-family: "Sora", sans-serif; font-weight: 600; font-size: .95rem;
+    border-radius: 6px; padding: 13px 24px;
+  }
+  .btn-amber { background: var(--amber); color: #14181F; }
+  .btn-amber:hover { background: var(--amber-deep); }
+  .btn-line { border: 1.5px solid var(--line); color: var(--ink); }
+  .btn-line:hover { border-color: var(--amber); color: var(--amber); }
+
+  header.top { position: sticky; top: 0; z-index: 40; background: rgba(20,24,31,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top-in { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 20px; max-width: 1060px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-family: "Sora", sans-serif; font-weight: 800; font-size: 1.2rem; }
+  .brand .bolt { width: 30px; height: 30px; border-radius: 6px; background: var(--amber); display: grid; place-items: center; }
+
+  .hero { padding: 76px 0 64px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 46px; align-items: center; }
+  @media (max-width: 840px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; }
+  .hero h1 em { font-style: normal; color: var(--amber); }
+  .hero .sub { color: var(--ink-2); font-size: 1.12rem; margin-top: 14px; max-width: 50ch; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .hero-img { border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
+  .hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .badges { display: flex; flex-wrap: wrap; gap: 16px 26px; margin-top: 28px; }
+  .badges div { display: flex; align-items: center; gap: 8px; font-size: .9rem; color: var(--ink-2); }
+  .badges svg { flex: none; }
+
+  .services { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 14px; margin-top: 28px; }
+  .scard { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+  .scard h3 { font-size: 1rem; font-weight: 700; margin: 12px 0 6px; }
+  .scard p { font-size: .9rem; color: var(--ink-2); margin: 0 0 10px; }
+  .scard .tarif { font-family: "Sora", sans-serif; font-size: .82rem; font-weight: 600; color: var(--amber); }
+  .scard .ico { width: 40px; height: 40px; border-radius: 8px; background: var(--panel-2); display: grid; place-items: center; }
+
+  .process { }
+  .pgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 28px; }
+  .pstep { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 24px; position: relative; }
+  .pstep .n { font-family: "Sora", sans-serif; font-weight: 800; font-size: 2rem; color: var(--amber); opacity: .9; }
+  .pstep h3 { font-size: 1.02rem; margin: 10px 0 6px; }
+  .pstep p { font-size: .91rem; color: var(--ink-2); margin: 0; }
+
+  .domo-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 44px; align-items: center; }
+  @media (max-width: 840px) { .domo-grid { grid-template-columns: 1fr; } }
+  .domo-grid img { width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
+  .domo-list { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 10px; }
+  .domo-list li { display: flex; gap: 10px; align-items: baseline; color: var(--ink-2); font-size: .95rem; }
+  .domo-list li::before { content: "→"; color: var(--amber); flex: none; }
+
+  .garanties { background: var(--amber); color: #14181F; padding: 46px 0; }
+  .g-in { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .g-item b { display: block; font-family: "Sora", sans-serif; font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; }
+  .g-item span { font-size: .9rem; color: #4A3A16; }
+
+  .avis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 28px; }
+  .avis { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+  .avis .stars { color: var(--amber); letter-spacing: 2px; margin-bottom: 10px; }
+  .avis p { font-size: .94rem; color: var(--ink-2); font-style: italic; }
+  .avis b { font-size: .86rem; color: var(--ink); }
+
+  .contact { background: var(--panel); border-top: 1px solid var(--line); }
+  .c-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+  @media (max-width: 760px) { .c-grid { grid-template-columns: 1fr; } }
+  .c-card { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 26px; }
+  .c-card h3 { font-size: 1.05rem; margin-bottom: 14px; }
+  .c-row { display: flex; gap: 10px; padding: 7px 0; font-size: .95rem; color: var(--ink-2); }
+  .c-row b { color: var(--ink); min-width: 100px; font-weight: 600; }
+  .c-row a { color: var(--amber); }
+  label { display: block; font-size: .84rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  input, textarea {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 6px; padding: 10px 12px;
+    font: inherit; font-size: .94rem; background: var(--panel-2); color: var(--ink); margin-bottom: 12px;
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--amber); border-color: var(--amber); }
+  .communes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .communes span { background: var(--panel-2); border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px; font-size: .84rem; color: var(--ink-2); }
+
+  footer { padding: 28px 0; font-size: .85rem; color: var(--ink-3); border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 30px; justify-content: space-between; }
+  .demo-note { background: #0E1116; color: #6E7988; text-align: center; font-size: .8rem; padding: 10px 16px; }
+  .demo-note a { color: var(--amber); font-weight: 600; }
+  :focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#"><span class="bolt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#14181F"/></svg></span>VOLTÉO</a>
+    <a class="btn btn-amber" href="tel:+33299007833">02 99 00 78 33</a>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <p class="kicker">Électricien certifié · Nantes métropole</p>
+      <h1>Une installation électrique <em>sûre, aux normes, durable</em>.</h1>
+      <p class="sub">Mise aux normes, dépannage, domotique et bornes de recharge. Un devis clair sous 24 h, un chantier propre, une garantie écrite — depuis 2012.</p>
+      <div class="hero-cta">
+        <a class="btn btn-amber" href="#devis">Devis gratuit sous 24 h</a>
+        <a class="btn btn-line" href="#services">Nos prestations</a>
+      </div>
+      <div class="badges">
+        <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#7FC79A" stroke-width="2.4" stroke-linecap="round"/></svg>Certifié Qualifelec</div>
+        <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#7FC79A" stroke-width="2.4" stroke-linecap="round"/></svg>Garantie décennale</div>
+        <div><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#7FC79A" stroke-width="2.4" stroke-linecap="round"/></svg>Devis ferme, jamais dépassé</div>
+      </div>
+    </div>
+    <div class="hero-img"><img src="assets/hero.jpg" alt="Électricien Voltéo câblant proprement un tableau électrique moderne"></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="kicker">Prestations</p>
+    <h2>Du disjoncteur qui saute au logement connecté</h2>
+    <div class="sgrid">
+      <div class="scard">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#F2A93B" stroke-width="1.7"/><path d="M8 7h8M8 11h8M8 15h4" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Mise aux normes NF C 15-100</h3>
+        <p>Diagnostic complet, remplacement de tableau, mise à la terre. Indispensable avant vente ou location.</p>
+        <span class="tarif">Tableau complet dès 890 €</span>
+      </div>
+      <div class="scard">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="#F2A93B" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+        <h3>Dépannage &amp; recherche de panne</h3>
+        <p>Coupure, disjoncteur qui saute, prise brûlée : diagnostic précis et réparation dans la journée.</p>
+        <span class="tarif">Dès 95 € — déplacement inclus</span>
+      </div>
+      <div class="scard">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3.2" stroke="#F2A93B" stroke-width="1.7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Éclairage &amp; rénovation</h3>
+        <p>Spots, variateurs, reprise complète en rénovation : plans de câblage fournis, finitions soignées.</p>
+        <span class="tarif">Sur devis sous 24 h</span>
+      </div>
+      <div class="scard">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#F2A93B" stroke-width="1.7"/><path d="M7 18v2M17 18v2M12 9v6M9 12h6" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Borne de recharge (IRVE)</h3>
+        <p>Installation certifiée de bornes 7 kW à domicile, dossier d'aides Advenir géré pour vous.</p>
+        <span class="tarif">Pose dès 490 € hors borne</span>
+      </div>
+      <div class="scard">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11l8-7 8 7" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9h12v-9" stroke="#F2A93B" stroke-width="1.7"/><circle cx="12" cy="14.5" r="2" stroke="#F2A93B" stroke-width="1.7"/></svg></div>
+        <h3>Domotique &amp; maison connectée</h3>
+        <p>Chauffage, volets, éclairage pilotés depuis votre téléphone. Simple à l'usage, installé proprement.</p>
+        <span class="tarif">Kit de départ dès 690 € posé</span>
+      </div>
+      <div class="scard">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 4v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V7l7-4z" stroke="#F2A93B" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Sécurité électrique</h3>
+        <p>Détecteurs, parafoudre, différentiels : protection des personnes et des équipements sensibles.</p>
+        <span class="tarif">Audit sécurité offert avec tout devis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process wrap">
+  <p class="kicker">Méthode</p>
+  <h2>Trois étapes, zéro mauvaise surprise</h2>
+  <div class="pgrid">
+    <div class="pstep"><div class="n">1</div><h3>Visite &amp; devis sous 24 h</h3><p>Déplacement gratuit sur Nantes métropole. Devis détaillé ligne par ligne, ferme et définitif.</p></div>
+    <div class="pstep"><div class="n">2</div><h3>Intervention planifiée</h3><p>Date fixée ensemble, respectée. Protection du chantier, coupures réduites au minimum annoncé.</p></div>
+    <div class="pstep"><div class="n">3</div><h3>Réception &amp; garantie</h3><p>Tests complets devant vous, schémas remis, facture conforme. Main-d'œuvre garantie, décennale incluse.</p></div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap domo-grid">
+    <img src="assets/domotique.jpg" alt="Panneau de contrôle domotique installé dans un salon moderne">
+    <div>
+      <p class="kicker">Spécialité maison connectée</p>
+      <h2>Votre maison vous obéit au doigt et à la voix</h2>
+      <p style="color:var(--ink-2);">Nous installons des systèmes ouverts et durables — pas de gadgets qui finissent dans un tiroir. Tout est paramétré, expliqué, et reste modifiable par vous.</p>
+      <ul class="domo-list">
+        <li>Chauffage piloté pièce par pièce : jusqu'à 15 % d'économies</li>
+        <li>Volets et éclairages sur scénarios (départ, nuit, vacances)</li>
+        <li>Compatible assistants vocaux et téléphones Android / iPhone</li>
+        <li>Formation à l'usage incluse à la livraison</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="garanties">
+  <div class="wrap g-in">
+    <div class="g-item"><b>Devis ferme</b><span>Le prix signé est le prix facturé, engagement écrit.</span></div>
+    <div class="g-item"><b>Décennale + RC pro</b><span>Attestations fournies avec chaque devis.</span></div>
+    <div class="g-item"><b>Certifié Qualifelec</b><span>Qualification contrôlée, renouvelée chaque année.</span></div>
+    <div class="g-item"><b>Chantier propre</b><span>Bâches, aspiration, évacuation des déchets incluses.</span></div>
+  </div>
+</div>
+
+<section class="wrap">
+  <p class="kicker">Avis clients</p>
+  <h2>Ils nous font confiance</h2>
+  <div class="avis-grid">
+    <div class="avis"><div class="stars">★★★★★</div><p>« Tableau électrique remplacé en une journée, explications claires, chantier impeccable. Le devis n'a pas bougé d'un euro. »</p><b>Laurent M. — Nantes Erdre</b></div>
+    <div class="avis"><div class="stars">★★★★★</div><p>« Installation de ma borne de recharge avec le dossier d'aide géré de A à Z. Rapide et carré. »</p><b>Aurélie T. — Saint-Herblain</b></div>
+    <div class="avis"><div class="stars">★★★★★</div><p>« Rénovation complète de notre longère : plans fournis, délais tenus, finitions parfaites. Une équipe sérieuse. »</p><b>Famille Guibert — Vertou</b></div>
+  </div>
+</section>
+
+<section class="contact" id="devis">
+  <div class="wrap">
+    <p class="kicker">Contact</p>
+    <h2>Votre devis gratuit sous 24 h</h2>
+    <div class="c-grid">
+      <div class="c-card">
+        <h3>Voltéo Électricité</h3>
+        <div class="c-row"><b>Téléphone</b><span><a href="tel:+33299007833">02 99 00 78 33</a> — lun.–sam. 8 h – 19 h</span></div>
+        <div class="c-row"><b>E-mail</b><span>devis@volteo-elec.fr</span></div>
+        <div class="c-row"><b>Atelier</b><span>27 boulevard des Forgerons, 44300 Nantes</span></div>
+        <div class="c-row"><b>SIRET</b><span>751 208 443 00019 — Qualifelec E2C2</span></div>
+        <p style="margin-top:14px; font-size:.9rem; color:var(--ink-3);">Zone d'intervention :</p>
+        <div class="communes"><span>Nantes</span><span>Saint-Herblain</span><span>Rezé</span><span>Orvault</span><span>Vertou</span><span>Carquefou</span><span>Bouguenais</span><span>Couëron</span></div>
+      </div>
+      <div class="c-card">
+        <h3>Décrivez votre projet</h3>
+        <form onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;font-weight:600;&quot;>Merci ! Nous vous recontactons sous 24 h ouvrées avec un premier chiffrage.</p>';">
+          <label for="nom">Votre nom</label><input id="nom" name="nom" required autocomplete="name">
+          <label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" required autocomplete="tel">
+          <label for="msg">Votre projet</label><textarea id="msg" name="msg" rows="3" placeholder="Ex. : remise aux normes appartement 65 m², année 1975…"></textarea>
+          <button class="btn btn-amber" type="submit" style="border:0; cursor:pointer; width:100%; font: inherit; font-family:'Sora',sans-serif; font-weight:600;">Recevoir mon devis</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Voltéo Électricité — Nantes</span>
+    <span>Mise aux normes · Dépannage · Domotique · IRVE</span>
+  </div>
+</footer>
+<div class="demo-note">Site fictif de démonstration — réalisé par <a href="../">Vitrine48h</a> · votre site comme celui-ci : 249 €, livré en 48 h</div>
+
+</body>
+</html>

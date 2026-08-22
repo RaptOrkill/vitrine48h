@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitrine48h — Votre site professionnel en 48 h, 249 €, payé à la livraison</title>
+<meta name="description" content="Site vitrine professionnel pour artisans et indépendants : 249 € tout compris, livré en 48 h, maquette gratuite avant tout engagement. Vous ne payez qu'à la livraison.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;600&display=swap">
+<style>
+  :root {
+    --bg: #F5F7FA;
+    --panel: #FFFFFF;
+    --panel-2: #EBF0F6;
+    --ink: #1C2430;
+    --ink-2: #4A5568;
+    --ink-3: #7A8698;
+    --line: #D8DFE8;
+    --blue: #33619E;
+    --blue-deep: #24487A;
+    --blue-soft: #E3EBF5;
+    --cta: #D95B2B;
+    --cta-deep: #B84A20;
+    --ok: #2F7A4D;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: "Bricolage Grotesque", "Arial", sans-serif; line-height: 1.1; text-wrap: balance; }
+  h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); font-weight: 800; margin-bottom: 12px; }
+  p { margin-bottom: 14px; }
+  a { color: var(--blue); }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+  .eyebrow {
+    font-family: "Spline Sans Mono", monospace;
+    font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--blue); margin-bottom: 10px;
+  }
+  section { padding: 72px 0; }
+
+  /* Header */
+  header.top {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245,247,250,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .top-in { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; max-width: 1060px; margin: 0 auto; }
+  .logo { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--blue); }
+  .btn {
+    display: inline-block; text-decoration: none; text-align: center;
+    font-weight: 700; border-radius: 6px; padding: 12px 22px;
+    transition: transform .12s ease, background .12s ease;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn-cta { background: var(--cta); color: #fff; }
+  .btn-cta:hover { background: var(--cta-deep); }
+  .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+  .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
+  .btn-sm { padding: 9px 16px; font-size: .92rem; }
+
+  /* Hero */
+  .hero { padding: 84px 0 64px; }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem); font-weight: 800; letter-spacing: -.01em;
+    max-width: 17ch;
+  }
+  .hero h1 em { font-style: normal; color: var(--blue); }
+  .hero .sub { font-size: 1.2rem; color: var(--ink-2); max-width: 54ch; margin-top: 18px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .chip {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
+    padding: 8px 16px; font-weight: 600; font-size: .93rem; color: var(--ink-2);
+  }
+  .chip svg { flex: none; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; align-items: center; }
+  .hero-note { font-size: .88rem; color: var(--ink-3); margin-top: 12px; }
+
+  /* Demos */
+  .demos { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 30px; }
+  .demo-card {
+    background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden; display: flex; flex-direction: column;
+  }
+  .frame {
+    position: relative; aspect-ratio: 16 / 11; overflow: hidden;
+    background: var(--panel-2); border-bottom: 1px solid var(--line);
+  }
+  .frame-bar {
+    position: absolute; top: 0; left: 0; right: 0; height: 22px; z-index: 2;
+    background: var(--panel-2); border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 5px; padding: 0 10px;
+  }
+  .frame-bar i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); display: block; }
+  .frame iframe {
+    position: absolute; top: 22px; left: 0;
+    width: 400%; height: 400%;
+    transform: scale(.25); transform-origin: 0 0;
+    border: 0; pointer-events: none;
+  }
+  .demo-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .demo-body h3 { font-size: 1.08rem; font-weight: 700; }
+  .demo-body p { font-size: .92rem; color: var(--ink-2); flex: 1; margin: 0; }
+  .demo-body a { margin-top: 10px; }
+
+  /* Offre */
+  .offer-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 26px; margin-top: 30px; align-items: start; }
+  @media (max-width: 820px) { .offer-grid { grid-template-columns: 1fr; } }
+  .price-card {
+    background: var(--panel); border: 1px solid var(--line); border-top: 5px solid var(--cta);
+    border-radius: 10px; padding: 30px;
+  }
+  .price {
+    font-family: "Bricolage Grotesque", sans-serif; font-weight: 800;
+    font-size: 3.4rem; line-height: 1; color: var(--ink);
+  }
+  .price small { font-size: 1.1rem; font-weight: 600; color: var(--ink-3); }
+  .price-note { color: var(--cta); font-weight: 700; margin-top: 6px; }
+  .inclus { list-style: none; padding: 0; margin: 22px 0 26px; display: grid; gap: 11px; }
+  .inclus li { display: flex; gap: 10px; align-items: baseline; font-size: .98rem; color: var(--ink-2); }
+  .inclus li::before { content: "✓"; color: var(--ok); font-weight: 700; flex: none; }
+  .upsell {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 24px 26px;
+  }
+  .upsell h3 { font-size: 1rem; margin-bottom: 14px; }
+  .up-row {
+    display: flex; justify-content: space-between; gap: 14px;
+    padding: 11px 0; border-bottom: 1px solid var(--line);
+    font-size: .95rem; color: var(--ink-2);
+  }
+  .up-row:last-child { border-bottom: none; }
+  .up-row b { font-family: "Spline Sans Mono", monospace; font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+  /* Process */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 30px; }
+  .step { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+  .step .n {
+    font-family: "Spline Sans Mono", monospace; font-weight: 600; font-size: .8rem;
+    color: var(--blue); display: block; margin-bottom: 10px;
+  }
+  .step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .step p { font-size: .92rem; color: var(--ink-2); margin: 0; }
+
+  /* Honnêteté */
+  .why { background: var(--blue-deep); color: #EAF0F8; }
+  .why .eyebrow { color: #9FBCE0; }
+  .why h2 { color: #fff; }
+  .why p { color: #C9D6E8; max-width: 62ch; }
+  .why strong { color: #fff; }
+
+  /* FAQ */
+  details {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+    padding: 0 20px; margin-bottom: 10px;
+  }
+  summary {
+    cursor: pointer; font-weight: 700; padding: 16px 0; list-style: none;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  summary::after { content: "+"; font-family: "Spline Sans Mono", monospace; color: var(--blue); font-size: 1.2rem; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--ink-2); padding-bottom: 16px; font-size: .96rem; }
+
+  /* Contact */
+  .contact { text-align: center; }
+  .contact .big-cta { font-size: 1.15rem; padding: 16px 34px; }
+  .contact .or { color: var(--ink-3); font-size: .9rem; margin: 14px 0 4px; }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 34px 0 44px;
+    font-size: .84rem; color: var(--ink-3);
+  }
+  footer .cols { display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; }
+  footer p { margin-bottom: 6px; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#">Vitrine<span>48h</span></a>
+    <a class="btn btn-cta btn-sm wa-link" href="#contact">Maquette gratuite</a>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <p class="eyebrow">Sites vitrines pour artisans &amp; indépendants</p>
+  <h1>Votre site professionnel en <em>48 heures</em>. 249 €. Payé à la livraison.</h1>
+  <p class="sub">Les agences facturent 1 500 € et livrent en un mois. Nous livrons un site complet, rapide et conforme en deux jours — et vous ne payez que si le résultat vous plaît.</p>
+  <div class="chips">
+    <span class="chip"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#2F7A4D" stroke-width="2.4" stroke-linecap="round"/></svg>0 € d'avance</span>
+    <span class="chip"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#2F7A4D" stroke-width="2.4" stroke-linecap="round"/></svg>Prix unique, zéro abonnement caché</span>
+    <span class="chip"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#2F7A4D" stroke-width="2.4" stroke-linecap="round"/></svg>Le site vous appartient</span>
+  </div>
+  <div class="hero-cta">
+    <a class="btn btn-cta wa-link" href="#contact">Recevoir ma maquette gratuite</a>
+    <a class="btn btn-ghost" href="#demos">Voir des exemples</a>
+  </div>
+  <p class="hero-note">Maquette sans engagement, réponse en moins d'une heure (9 h – 21 h, 7j/7).</p>
+</section>
+
+<section class="demos" id="demos">
+  <div class="wrap">
+    <p class="eyebrow">Réalisations</p>
+    <h2>Trois exemples, trois métiers</h2>
+    <p style="color:var(--ink-2); max-width:60ch;">Chaque site est conçu pour son métier : un plombier a besoin qu'on l'appelle en urgence, un institut qu'on réserve, un électricien qu'on lui demande un devis. Cliquez, tout est réel.</p>
+    <div class="demo-grid">
+      <article class="demo-card">
+        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><iframe src="demo-plomberie/" title="Aperçu du site démo plomberie" loading="lazy" tabindex="-1"></iframe></div>
+        <div class="demo-body">
+          <h3>Plomberie Bastin &amp; Fils — Lyon</h3>
+          <p>Dépannage d'urgence : numéro cliquable partout, tarifs annoncés, zone d'intervention claire.</p>
+          <a class="btn btn-ghost btn-sm" href="demo-plomberie/">Ouvrir la démo</a>
+        </div>
+      </article>
+      <article class="demo-card">
+        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><iframe src="demo-institut/" title="Aperçu du site démo institut de beauté" loading="lazy" tabindex="-1"></iframe></div>
+        <div class="demo-body">
+          <h3>L'Écrin de Jade — Bordeaux</h3>
+          <p>Institut de beauté : carte des soins avec prix, ambiance élégante, réservation en un geste.</p>
+          <a class="btn btn-ghost btn-sm" href="demo-institut/">Ouvrir la démo</a>
+        </div>
+      </article>
+      <article class="demo-card">
+        <div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><iframe src="demo-electricien/" title="Aperçu du site démo électricien" loading="lazy" tabindex="-1"></iframe></div>
+        <div class="demo-body">
+          <h3>Voltéo Électricité — Nantes</h3>
+          <p>Électricien : mise aux normes, domotique, process de devis en trois étapes, garanties visibles.</p>
+          <a class="btn btn-ghost btn-sm" href="demo-electricien/">Ouvrir la démo</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="offre">
+  <p class="eyebrow">L'offre</p>
+  <h2>Tout compris, sans surprise</h2>
+  <div class="offer-grid">
+    <div class="price-card">
+      <div class="price">249&nbsp;€ <small>TTC, une seule fois</small></div>
+      <p class="price-note">Vous ne payez qu'à la livraison, si le site vous plaît.</p>
+      <ul class="inclus">
+        <li>Site complet 1 à 5 pages, adapté à votre métier</li>
+        <li>Parfait sur mobile, tablette et ordinateur</li>
+        <li>Textes rédigés pour vous à partir d'un simple échange</li>
+        <li>Formulaire de contact + boutons d'appel directs</li>
+        <li>Mentions légales et conformité RGPD incluses</li>
+        <li>Mise en ligne et hébergement la première année : 0 €</li>
+        <li>Le code et le site vous appartiennent à 100 %</li>
+        <li>Une série de retouches incluse après livraison</li>
+      </ul>
+      <a class="btn btn-cta wa-link" href="#contact">Démarrer — maquette gratuite</a>
+    </div>
+    <div class="upsell">
+      <h3>Options, uniquement si vous en voulez</h3>
+      <div class="up-row"><span>Nom de domaine (.fr) + adresse e-mail professionnelle, 1<sup>re</sup> année</span><b>49 €</b></div>
+      <div class="up-row"><span>Fiche Google Business créée et optimisée (apparaître sur Google Maps)</span><b>79 €</b></div>
+      <div class="up-row"><span>Maintenance : modifications illimitées, site surveillé</span><b>19 €/mois</b></div>
+      <div class="up-row"><span>Page ou rubrique supplémentaire au-delà de 5</span><b>29 €</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="process" style="padding-top: 0;">
+  <p class="eyebrow">Comment ça marche</p>
+  <h2>De l'appel à la mise en ligne</h2>
+  <div class="steps">
+    <div class="step"><span class="n">ÉTAPE 1 · 10 MIN</span><h3>On échange</h3><p>Par WhatsApp ou téléphone : votre métier, vos services, vos horaires, ce que vous aimez. C'est tout ce dont j'ai besoin.</p></div>
+    <div class="step"><span class="n">ÉTAPE 2 · SOUS 24 H</span><h3>Maquette gratuite</h3><p>Vous recevez un lien vers une vraie première version de votre site. Gratuite, sans engagement. Elle ne vous plaît pas ? On en reste là.</p></div>
+    <div class="step"><span class="n">ÉTAPE 3 · SOUS 48 H</span><h3>Livraison</h3><p>Retouches selon vos remarques, puis mise en ligne. Votre site est accessible au monde entier.</p></div>
+    <div class="step"><span class="n">ÉTAPE 4 · À LA FIN</span><h3>Vous payez</h3><p>249 € par virement ou carte, uniquement une fois le site en ligne et validé par vous. Facture fournie.</p></div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <p class="eyebrow">La question qu'on me pose toujours</p>
+    <h2>Pourquoi 249 € quand les autres facturent 1 500 € ?</h2>
+    <p>Pas de local, pas de commercial, pas de réunions à rallonge — et des outils d'automatisation récents qui me font produire en heures ce qui prenait des jours. Je répercute cette économie sur le prix, le métier reste le même : un site propre, rapide, à votre image.</p>
+    <p><strong>Ce n'est pas une offre « low cost » à abonnement caché :</strong> le prix est unique, le site vous appartient, et vous partez avec les fichiers si vous le souhaitez. C'est précisément parce que je n'ai presque aucun coût que je peux me permettre le « payé à la livraison ».</p>
+  </div>
+</section>
+
+<section class="wrap" id="faq">
+  <p class="eyebrow">Questions fréquentes</p>
+  <h2>Tout ce qu'il faut savoir</h2>
+  <details>
+    <summary>Que se passe-t-il si la maquette ne me plaît pas ?</summary>
+    <p>Rien. Vous ne payez pas, on se dit au revoir cordialement. La maquette gratuite existe justement pour que vous ne preniez aucun risque.</p>
+  </details>
+  <details>
+    <summary>Y a-t-il des frais cachés ou un abonnement obligatoire ?</summary>
+    <p>Non. 249 € une fois, c'est tout. L'hébergement de la première année est inclus ; ensuite il coûte environ 0 à 10 € par an selon vos choix, payés directement par vous, sans passer par moi. La maintenance à 19 €/mois est une option, jamais une obligation.</p>
+  </details>
+  <details>
+    <summary>Le site m'appartient-il vraiment ?</summary>
+    <p>Oui, intégralement : le nom de domaine est enregistré à votre nom, et le code vous est remis. Si vous partez demain chez un autre prestataire, vous emportez tout.</p>
+  </details>
+  <details>
+    <summary>48 heures, vraiment ?</summary>
+    <p>Oui, à partir du moment où j'ai vos informations (l'échange de 10 minutes). Si vous voulez ajouter beaucoup de contenu ou de pages, on convient ensemble d'un délai réaliste — annoncé avant, pas après.</p>
+  </details>
+  <details>
+    <summary>Serai-je visible sur Google ?</summary>
+    <p>Le site est construit proprement pour Google (structure, vitesse, textes optimisés sur votre métier et votre ville). Pour accélérer la visibilité locale, l'option fiche Google Business à 79 € est le meilleur investissement.</p>
+  </details>
+  <details>
+    <summary>Je ne suis pas à l'aise avec l'informatique, c'est un problème ?</summary>
+    <p>Aucun. Vous n'avez rien à installer ni à gérer : vous m'envoyez vos informations par message, je m'occupe de tout, et je reste joignable après la livraison.</p>
+  </details>
+</section>
+
+<section class="contact wrap" id="contact">
+  <p class="eyebrow">Contact</p>
+  <h2>Recevez votre maquette gratuite</h2>
+  <p style="color:var(--ink-2); max-width:52ch; margin:0 auto 24px;">Un message suffit : votre métier, votre ville. Réponse en moins d'une heure, maquette sous 24 h.</p>
+  <a class="btn btn-cta big-cta wa-link" href="#" data-msg="Bonjour, je suis intéressé par un site vitrine à 249 €. Mon métier : ">Écrire sur WhatsApp</a>
+  <p class="or">ou par téléphone / SMS : <a class="tel-link" href="#"><span class="tel-text">06 — — — — —</span></a></p>
+</section>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong style="color:var(--ink);">Vitrine48h</strong> — création de sites vitrines pour artisans et indépendants.</p>
+      <p>Sites d'exemple : <a href="demo-plomberie/">plombier</a> · <a href="demo-institut/">institut de beauté</a> · <a href="demo-electricien/">électricien</a></p>
+    </div>
+    <div>
+      <!-- ⚠️ À COMPLÉTER avec tes vraies informations légales -->
+      <p>Mentions légales : [Prénom Nom], micro-entrepreneur — SIRET [à compléter]</p>
+      <p>[Adresse] — Contact : voir bouton WhatsApp ci-dessus</p>
+      <p>Hébergement : GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr St, San Francisco, USA)</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ⚠️ CONFIGURATION — remplace UNIQUEMENT ces deux valeurs :
+  const PHONE_WHATSAPP = "33612345678";   // ton numéro au format international sans + ni espaces (ex: 33612345678)
+  const PHONE_DISPLAY  = "06 12 34 56 78"; // ton numéro tel qu'affiché sur la page
+
+  document.querySelectorAll(".wa-link").forEach(a => {
+    const msg = encodeURIComponent(a.dataset.msg || "Bonjour, je suis intéressé par un site vitrine à 249 €.");
+    a.href = "https://wa.me/" + PHONE_WHATSAPP + "?text=" + msg;
+  });
+  document.querySelectorAll(".tel-link").forEach(a => { a.href = "tel:+" + PHONE_WHATSAPP; });
+  document.querySelectorAll(".tel-text").forEach(s => { s.textContent = PHONE_DISPLAY; });
+</script>
+</body>
+</html>

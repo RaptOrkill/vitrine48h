@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plomberie Bastin &amp; Fils — Dépannage plomberie à Lyon, 7j/7</title>
+<meta name="description" content="Plombier à Lyon depuis 1998. Dépannage d'urgence 7j/7, intervention sous 1 h, prix annoncé avant travaux. Fuites, débouchage, chauffe-eau, salle de bain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+  :root {
+    --navy: #0F2A43;
+    --navy-2: #16385A;
+    --copper: #B4622D;
+    --copper-deep: #96501F;
+    --paper: #FAF8F5;
+    --panel: #FFFFFF;
+    --ink: #1D2733;
+    --ink-2: #52606F;
+    --line: #E2DDD5;
+    --gold: #E8A33D;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: "Public Sans", system-ui, sans-serif; font-size: 17px; line-height: 1.6; }
+  h1, h2, h3 { font-family: "Archivo", sans-serif; line-height: 1.08; text-wrap: balance; }
+  h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  p { margin-bottom: 12px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 64px 0; }
+  .kicker { font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--copper); margin-bottom: 8px; }
+
+  .urgence-bar {
+    background: var(--copper); color: #fff; text-align: center;
+    font-weight: 700; font-size: .92rem; padding: 8px 16px;
+  }
+  .urgence-bar a { color: #fff; }
+
+  header.top { position: sticky; top: 0; z-index: 40; background: var(--navy); }
+  .top-in { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 20px; max-width: 1040px; margin: 0 auto; }
+  .brand { color: #fff; text-decoration: none; font-family: "Archivo", sans-serif; font-weight: 900; font-size: 1.15rem; letter-spacing: .01em; }
+  .brand small { display: block; font-family: "Public Sans", sans-serif; font-weight: 400; font-size: .68rem; color: #A8BDD4; letter-spacing: .1em; text-transform: uppercase; }
+  .btn { display: inline-block; text-decoration: none; font-weight: 700; border-radius: 5px; padding: 12px 22px; text-align: center; }
+  .btn-call { background: var(--copper); color: #fff; white-space: nowrap; }
+  .btn-call:hover { background: var(--copper-deep); }
+  .btn-line { border: 1.5px solid var(--navy); color: var(--navy); }
+  .btn-line:hover { background: var(--navy); color: #fff; }
+
+  .hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; padding: 72px 0 64px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  @media (max-width: 840px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hero-photo { border-radius: 10px; overflow: hidden; border: 3px solid rgba(255,255,255,.12); box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero h1 { font-size: clamp(2.1rem, 5.5vw, 3.3rem); font-weight: 900; max-width: 20ch; }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero .sub { color: #C4D3E4; font-size: 1.15rem; max-width: 52ch; margin-top: 14px; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .hero .btn-ghost { border: 1.5px solid #4A6788; color: #fff; }
+  .hero .btn-ghost:hover { border-color: #fff; }
+  .assurances { display: flex; flex-wrap: wrap; gap: 20px 30px; margin-top: 30px; }
+  .assurances div { display: flex; align-items: center; gap: 9px; font-size: .93rem; color: #DCE6F1; font-weight: 600; }
+  .assurances svg { flex: none; }
+
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 28px; }
+  .service { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+  .service .ico { width: 42px; height: 42px; border-radius: 8px; background: var(--navy); display: grid; place-items: center; margin-bottom: 14px; }
+  .service h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .service p { font-size: .92rem; color: var(--ink-2); margin: 0 0 8px; }
+  .service .prix { font-size: .85rem; font-weight: 700; color: var(--copper); }
+
+  .bandeau { background: var(--copper); color: #fff; padding: 40px 0; }
+  .bandeau-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+  .bandeau h2 { color: #fff; margin: 0; font-size: clamp(1.3rem, 3vw, 1.7rem); }
+  .bandeau p { color: #F5DFCE; margin: 4px 0 0; }
+  .bandeau .btn { background: #fff; color: var(--copper-deep); }
+
+  .points { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 28px; }
+  .point { border-left: 3px solid var(--copper); padding: 4px 0 4px 16px; }
+  .point h3 { font-size: 1rem; color: var(--navy); margin-bottom: 4px; }
+  .point p { font-size: .92rem; color: var(--ink-2); margin: 0; }
+  .stats { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+  .stat { background: var(--navy); color: #fff; border-radius: 8px; padding: 18px 26px; flex: 1; min-width: 150px; text-align: center; }
+  .stat b { display: block; font-family: "Archivo", sans-serif; font-size: 1.9rem; font-weight: 900; color: var(--gold); }
+  .stat span { font-size: .84rem; color: #B9C9DB; }
+
+  .avis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 28px; }
+  .avis { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+  .avis .stars { color: var(--gold); letter-spacing: 2px; margin-bottom: 10px; }
+  .avis p { font-size: .95rem; color: var(--ink-2); font-style: italic; }
+  .avis b { font-size: .88rem; color: var(--navy); }
+
+  .zone { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .communes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .communes span { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: .88rem; color: var(--ink-2); }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+  @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
+  .c-card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 26px; }
+  .c-card h3 { color: var(--navy); margin-bottom: 12px; }
+  .c-row { display: flex; gap: 10px; padding: 8px 0; font-size: .96rem; color: var(--ink-2); }
+  .c-row b { color: var(--navy); min-width: 86px; font-weight: 700; }
+  form .field { margin-bottom: 12px; }
+  label { display: block; font-size: .85rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  input, textarea {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 5px; padding: 10px 12px;
+    font: inherit; font-size: .95rem; background: var(--paper); color: var(--ink);
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--copper); border-color: var(--copper); }
+
+  footer { background: var(--navy); color: #A8BDD4; font-size: .85rem; padding: 30px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: space-between; }
+  footer a { color: #fff; }
+  .demo-note { background: #0B1F33; color: #7E96AE; text-align: center; font-size: .8rem; padding: 10px 16px; }
+  .demo-note a { color: #E8A33D; font-weight: 700; }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<div class="urgence-bar">Fuite ? Canalisation bouchée ? Urgence 7j/7 : <a href="tel:+33639982140">06 39 98 21 40</a> — intervention sous 1 h sur Lyon</div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#">BASTIN &amp; FILS<small>Plomberie · Lyon · depuis 1998</small></a>
+    <a class="btn btn-call" href="tel:+33639982140">☎ 06 39 98 21 40</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <h1>Votre plombier à Lyon, <em>sur place en moins d'une heure</em>.</h1>
+      <p class="sub">Entreprise familiale depuis 1998. Dépannage d'urgence 7j/7, installations et rénovations — avec un prix ferme annoncé <strong>avant</strong> le premier coup de clé.</p>
+      <div class="hero-cta">
+        <a class="btn btn-call" href="tel:+33639982140">Appeler maintenant</a>
+        <a class="btn btn-ghost" href="#devis">Demander un devis gratuit</a>
+      </div>
+      <div class="assurances">
+        <div><svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#E8A33D" stroke-width="2.4" stroke-linecap="round"/></svg>Déplacement et devis gratuits</div>
+        <div><svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#E8A33D" stroke-width="2.4" stroke-linecap="round"/></svg>Prix annoncé avant intervention</div>
+        <div><svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="#E8A33D" stroke-width="2.4" stroke-linecap="round"/></svg>Travaux garantis 2 ans</div>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="assets/hero.jpg" alt="Marc Bastin installant une tuyauterie cuivre sous un évier de cuisine"></div>
+  </div>
+</section>
+
+<section class="wrap" id="services">
+  <p class="kicker">Nos interventions</p>
+  <h2>Du robinet qui goutte à la salle de bain complète</h2>
+  <div class="services-grid">
+    <div class="service">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c3 4.5 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 3-6.5 6-11z" stroke="#E8A33D" stroke-width="1.8"/></svg></div>
+      <h3>Recherche &amp; réparation de fuites</h3>
+      <p>Fuite visible ou cachée, surconsommation anormale : localisation précise sans casse inutile.</p>
+      <span class="prix">Dès 89 € — déplacement inclus</span>
+    </div>
+    <div class="service">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="#E8A33D" stroke-width="1.8"/><path d="M12 8v4l3 2" stroke="#E8A33D" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h3>Débouchage canalisations</h3>
+      <p>Évier, WC, douche, colonne d'immeuble : furet électrique et haute pression, résultat immédiat.</p>
+      <span class="prix">Dès 119 €</span>
+    </div>
+    <div class="service">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2" stroke="#E8A33D" stroke-width="1.8"/><path d="M12 7v4" stroke="#E8A33D" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h3>Chauffe-eau &amp; ballon</h3>
+      <p>Dépannage, entretien, remplacement toutes marques. Pose sous 48 h, ancien appareil repris.</p>
+      <span class="prix">Remplacement dès 690 € pose incluse</span>
+    </div>
+    <div class="service">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20v-6a8 8 0 0 1 16 0v6" stroke="#E8A33D" stroke-width="1.8"/><path d="M2 20h20" stroke="#E8A33D" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h3>Rénovation salle de bain</h3>
+      <p>De la douche à l'italienne à la salle de bain clé en main, avec plans et budget détaillé.</p>
+      <span class="prix">Sur devis — chiffrage sous 72 h</span>
+    </div>
+    <div class="service">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5v14" stroke="#E8A33D" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h3>Robinetterie &amp; sanitaires</h3>
+      <p>Pose et remplacement de robinets, WC, éviers, receveurs — fournitures au choix ou fournies.</p>
+      <span class="prix">Dès 75 €</span>
+    </div>
+    <div class="service">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5" stroke="#E8A33D" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <h3>Dégâts des eaux</h3>
+      <p>Mise en sécurité immédiate, rapport pour votre assurance, remise en état coordonnée.</p>
+      <span class="prix">Intervention d'urgence 7j/7</span>
+    </div>
+  </div>
+</section>
+
+<div class="bandeau">
+  <div class="wrap bandeau-in">
+    <div>
+      <h2>Urgence plomberie en cours ?</h2>
+      <p>Coupez l'arrivée d'eau, appelez-nous : on vous guide au téléphone en attendant l'arrivée du technicien.</p>
+    </div>
+    <a class="btn" href="tel:+33639982140">☎ 06 39 98 21 40 — 7j/7</a>
+  </div>
+</div>
+
+<section class="wrap">
+  <p class="kicker">Pourquoi Bastin &amp; Fils</p>
+  <h2>Une maison lyonnaise, deux générations</h2>
+  <div class="points">
+    <div class="point"><h3>Prix ferme, jamais de surprise</h3><p>Le tarif est annoncé et validé par vous avant toute intervention. Ce qui est annoncé est ce qui est facturé.</p></div>
+    <div class="point"><h3>Des artisans, pas des sous-traitants</h3><p>Vous ouvrez la porte à Marc ou Julien Bastin, pas à un inconnu missionné par une plateforme.</p></div>
+    <div class="point"><h3>Propreté du chantier</h3><p>Protection des sols, aspiration, évacuation des gravats : on repart, il ne reste que le travail fini.</p></div>
+    <div class="point"><h3>Garantie écrite</h3><p>Main-d'œuvre garantie 2 ans sur toutes nos installations, mentionnée noir sur blanc sur la facture.</p></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>27 ans</b><span>d'activité à Lyon</span></div>
+    <div class="stat"><b>4,9/5</b><span>note moyenne clients</span></div>
+    <div class="stat"><b>&lt; 1 h</b><span>délai d'urgence moyen</span></div>
+    <div class="stat"><b>3 200+</b><span>interventions réalisées</span></div>
+  </div>
+</section>
+
+<section class="wrap" id="avis" style="padding-top:0;">
+  <p class="kicker">Ils nous ont ouvert leur porte</p>
+  <h2>Avis clients</h2>
+  <div class="avis-grid">
+    <div class="avis">
+      <div class="stars">★★★★★</div>
+      <p>« Fuite sous l'évier un dimanche soir. Arrivé en 40 minutes, prix annoncé au téléphone, respecté au centime. Rare. »</p>
+      <b>Nathalie R. — Lyon 3ᵉ</b>
+    </div>
+    <div class="avis">
+      <div class="stars">★★★★★</div>
+      <p>« Remplacement de chauffe-eau impeccable. Propre, rapide, et ils ont pris le temps de tout m'expliquer. »</p>
+      <b>Karim B. — Villeurbanne</b>
+    </div>
+    <div class="avis">
+      <div class="stars">★★★★★</div>
+      <p>« Salle de bain refaite du sol au plafond. Délais tenus, budget tenu, résultat superbe. Je recommande les yeux fermés. »</p>
+      <b>M. et Mme Perrin — Caluire</b>
+    </div>
+  </div>
+</section>
+
+<section class="zone">
+  <div class="wrap">
+    <p class="kicker">Zone d'intervention</p>
+    <h2>Lyon et sa métropole</h2>
+    <p style="color:var(--ink-2); max-width:60ch;">Basés dans le 3ᵉ arrondissement, nous intervenons dans tout Lyon intra-muros et les communes limitrophes, sans frais de déplacement supplémentaires.</p>
+    <div class="communes">
+      <span>Lyon 1ᵉʳ – 9ᵉ</span><span>Villeurbanne</span><span>Caluire-et-Cuire</span><span>Bron</span><span>Vénissieux</span><span>Oullins</span><span>Sainte-Foy-lès-Lyon</span><span>Tassin</span><span>Écully</span><span>Rillieux-la-Pape</span>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="devis">
+  <p class="kicker">Contact</p>
+  <h2>Devis gratuit sous 24 h</h2>
+  <div class="contact-grid">
+    <div class="c-card">
+      <h3>Nous joindre</h3>
+      <div class="c-row"><b>Urgences</b><span><a href="tel:+33639982140">06 39 98 21 40</a> — 7j/7, 6 h – 23 h</span></div>
+      <div class="c-row"><b>Bureau</b><span><a href="tel:+33499002690">04 99 00 26 90</a> — lun.–ven. 8 h – 18 h</span></div>
+      <div class="c-row"><b>E-mail</b><span>contact@plomberie-bastin.fr</span></div>
+      <div class="c-row"><b>Atelier</b><span>14 rue des Chaudronniers, 69003 Lyon</span></div>
+      <div class="c-row"><b>SIRET</b><span>512 384 921 00034 — assurance décennale AXA</span></div>
+    </div>
+    <div class="c-card">
+      <h3>Ou décrivez votre besoin</h3>
+      <form onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;color:var(--navy);font-weight:700;&quot;>Merci ! Nous vous rappelons sous 2 h ouvrées.</p>';">
+        <div class="field"><label for="nom">Votre nom</label><input id="nom" name="nom" required autocomplete="name"></div>
+        <div class="field"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" required autocomplete="tel"></div>
+        <div class="field"><label for="msg">Votre besoin</label><textarea id="msg" name="msg" rows="3" placeholder="Ex. : ballon d'eau chaude en panne, immeuble années 70…"></textarea></div>
+        <button class="btn btn-call" type="submit" style="border:0; cursor:pointer; font: inherit; font-weight:700; width:100%;">Être rappelé gratuitement</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Plomberie Bastin &amp; Fils — Lyon</span>
+    <span>Dépannage · Installation · Rénovation</span>
+  </div>
+</footer>
+<div class="demo-note">Site fictif de démonstration — réalisé par <a href="../">Vitrine48h</a> · votre site comme celui-ci : 249 €, livré en 48 h</div>
+
+</body>
+</html>
