@@ -86,7 +86,14 @@ Cible prioritaire : artisans avec une fiche Google Maps SANS site web (le bouton
 **Description** : Maquette gratuite. Payé à la livraison. Sans abonnement.
 **Formulaire** : Nom + Téléphone + question « Quel est votre métier ? »
 
-**Visuel** : capture d'écran d'une démo (voir dossier), ou avant/après « fiche pages jaunes → site moderne ».
+**Visuels prêts dans le dossier `pub/`** :
+- `meta-ad-1x1.png` — visuel principal (feed carré)
+- `meta-ad-prix-1x1.png` — variante « 1 500 € vs 249 € » (à tester en A/B contre le principal)
+- `meta-ad-story-9x16.png` — format stories / Reels
+- `video-ad-story-9x16.mp4` — vidéo 5 s pour Reels/Stories et TikTok
+- `video-ad-feed-1x1.mp4` — vidéo 5 s pour le feed
+
+Lance la campagne avec 2 publicités (visuel principal + variante prix) : Meta déterminera vite la gagnante.
 
 ⚠️ Réalité d'un compte pub neuf : la première campagne peut passer 24-48h en validation, parfois avec un rejet initial à contester. C'est normal. Les canaux 1-2-3 travaillent en attendant.
 
@@ -104,7 +111,23 @@ Cible prioritaire : artisans avec une fiche Google Maps SANS site web (le bouton
 
 ---
 
-## 6. Encaissement
+## 6. TikTok / Reels organique (gratuit, 10 min)
+
+Publie `pub/video-ad-story-9x16.mp4` en organique sur TikTok et Instagram Reels avec une description du type :
+
+> Les agences facturent 1 500 € pour un site d'artisan. Je le fais pour 249 €, livré en 48h, payé à la livraison. Maquette gratuite en MP. #artisan #autoentrepreneur #siteinternet #tpe
+
+Poste aussi un « screen recording » de tes démos qui défilent (enregistre ton écran de téléphone en scrollant une démo) : ce format brut convertit souvent mieux que la pub léchée.
+
+---
+
+## 7. Facturation
+
+Modèle de facture prêt : ouvre `facture-modele.html` dans ton navigateur, remplis les [crochets], Ctrl+P → PDF. Numérotation continue obligatoire (2026-001, 2026-002…), mention « TVA non applicable, art. 293 B du CGI » déjà incluse.
+
+---
+
+## 8. Encaissement
 
 - **Idéal** : lien de paiement (Stripe Payment Link ou SumUp) envoyé par WhatsApp à la livraison.
 - **Sinon** : virement instantané (RIB par WhatsApp) — habituel en France entre pros, zéro frais.

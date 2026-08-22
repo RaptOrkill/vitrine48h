@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raptorkill.github.io/vitrine48h/sitemap.xml

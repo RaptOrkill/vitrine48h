@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Jardins d'Arsène — Paysagiste à Aix-en-Provence</title>
+<meta name="description" content="Paysagiste à Aix-en-Provence : création de jardins méditerranéens, entretien à l'année, arrosage automatique, terrasses. Crédit d'impôt 50 % sur l'entretien.">
+<meta property="og:title" content="Les Jardins d'Arsène — Paysagiste à Aix-en-Provence">
+<meta property="og:description" content="Jardins méditerranéens, entretien à l'année, arrosage automatique. Crédit d'impôt 50 % sur l'entretien.">
+<meta property="og:image" content="https://raptorkill.github.io/vitrine48h/demo-paysagiste/assets/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21c0-6 2-11 8-15-1 7-3 12-8 15z' fill='%233D5A3C'/%3E%3Cpath d='M12 21c0-4-1.5-8-6-11 .8 5 2.5 8.7 6 11z' fill='%236B8E5A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+  :root {
+    --sable: #F5F0E6;
+    --panel: #FFFFFF;
+    --vert: #3D5A3C;
+    --vert-deep: #2E452E;
+    --vert-soft: #E7EDE3;
+    --terra: #C4703F;
+    --terra-deep: #A85B30;
+    --ink: #2A2E26;
+    --ink-2: #5C6355;
+    --line: #E2DACB;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--sable); color: var(--ink); font-family: "Karla", system-ui, sans-serif; font-size: 17px; line-height: 1.65; }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-height: 1.12; text-wrap: balance; }
+  h2 { font-size: clamp(1.8rem, 4.5vw, 2.4rem); color: var(--vert-deep); margin-bottom: 12px; }
+  p { margin-bottom: 12px; }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 70px 0; }
+  .kicker { font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; color: var(--terra); font-weight: 700; margin-bottom: 10px; }
+  .btn { display: inline-block; text-decoration: none; text-align: center; font-weight: 700; font-size: .96rem; border-radius: 4px; padding: 13px 26px; }
+  .btn-vert { background: var(--vert); color: #fff; }
+  .btn-vert:hover { background: var(--vert-deep); }
+  .btn-terra { background: var(--terra); color: #fff; }
+  .btn-terra:hover { background: var(--terra-deep); }
+  .btn-line { border: 1.5px solid var(--vert); color: var(--vert); }
+  .btn-line:hover { background: var(--vert-soft); }
+
+  header.top { position: sticky; top: 0; z-index: 40; background: rgba(245,240,230,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top-in { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 20px; max-width: 1020px; margin: 0 auto; }
+  .brand { font-family: "Fraunces", serif; font-weight: 700; font-size: 1.25rem; color: var(--vert-deep); text-decoration: none; }
+  .brand em { font-style: italic; color: var(--terra); }
+
+  .hero { position: relative; min-height: 72vh; display: grid; align-items: end; overflow: hidden; }
+  .hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,38,28,.05) 30%, rgba(30,38,28,.72)); }
+  .hero-in { position: relative; z-index: 2; color: #fff; padding: 0 20px 60px; max-width: 1020px; margin: 0 auto; width: 100%; }
+  .hero-in .kicker { color: #EAD9C4; }
+  .hero-in h1 { font-size: clamp(2.4rem, 6.5vw, 4rem); font-weight: 600; color: #fff; max-width: 18ch; }
+  .hero-in h1 em { font-style: italic; color: #F0C89A; }
+  .hero-in p { color: #EDEAE2; font-size: 1.12rem; max-width: 50ch; margin: 14px 0 24px; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  .credit-band { background: var(--terra); color: #fff; text-align: center; padding: 14px 20px; font-weight: 700; font-size: .98rem; }
+  .credit-band small { display: block; font-weight: 400; font-size: .82rem; color: #F4DFC9; }
+
+  .prestas { }
+  .p-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 30px; }
+  .presta { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 26px; }
+  .presta .ico { width: 44px; height: 44px; border-radius: 50%; background: var(--vert-soft); display: grid; place-items: center; margin-bottom: 14px; }
+  .presta h3 { font-size: 1.15rem; margin-bottom: 6px; color: var(--vert-deep); }
+  .presta p { font-size: .93rem; color: var(--ink-2); margin: 0 0 8px; }
+  .presta .prix { font-size: .85rem; font-weight: 700; color: var(--terra); }
+
+  .philo { background: var(--vert); color: #EDF2EA; }
+  .philo h2 { color: #fff; }
+  .philo .kicker { color: #BCD0B8; }
+  .philo p { color: #D6E2D2; max-width: 62ch; }
+  .philo-points { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 28px; }
+  .philo-points div { border-left: 2px solid var(--terra); padding-left: 14px; font-size: .95rem; color: #D6E2D2; }
+  .philo-points b { display: block; color: #fff; font-family: "Fraunces", serif; font-size: 1.05rem; margin-bottom: 4px; }
+
+  .avis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 28px; }
+  .avis { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 24px; }
+  .avis .stars { color: var(--terra); letter-spacing: 2px; margin-bottom: 10px; }
+  .avis p { font-size: .95rem; color: var(--ink-2); font-style: italic; }
+  .avis b { font-size: .88rem; color: var(--vert-deep); }
+
+  .contact { background: var(--panel); border-top: 1px solid var(--line); }
+  .c-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+  @media (max-width: 760px) { .c-grid { grid-template-columns: 1fr; } }
+  .c-card { background: var(--sable); border: 1px solid var(--line); border-radius: 6px; padding: 26px; }
+  .c-card h3 { color: var(--vert-deep); margin-bottom: 12px; font-size: 1.2rem; }
+  .c-row { display: flex; gap: 10px; padding: 8px 0; font-size: .96rem; color: var(--ink-2); }
+  .c-row b { color: var(--vert-deep); min-width: 96px; font-weight: 700; }
+  .c-row a { color: var(--terra); }
+  label { display: block; font-size: .85rem; font-weight: 700; color: var(--vert-deep); margin-bottom: 4px; }
+  input, textarea { width: 100%; border: 1.5px solid var(--line); border-radius: 4px; padding: 10px 12px; font: inherit; font-size: .95rem; background: #fff; color: var(--ink); margin-bottom: 12px; }
+  input:focus, textarea:focus { outline: 2px solid var(--vert); border-color: var(--vert); }
+  .communes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .communes span { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px; font-size: .85rem; color: var(--ink-2); }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0; font-size: .85rem; color: var(--ink-2); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 30px; justify-content: space-between; }
+  .demo-note { background: var(--vert-deep); color: #A9BCA5; text-align: center; font-size: .8rem; padding: 10px 16px; }
+  .demo-note a { color: #F0C89A; font-weight: 700; }
+  :focus-visible { outline: 3px solid var(--terra); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#">Les Jardins <em>d'Arsène</em></a>
+    <a class="btn btn-vert" href="tel:+33639983281">06 39 98 32 81</a>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="bg" src="assets/hero.jpg" alt="Jardinier taillant une haie de buis dans un jardin provençal, lavandes et oliviers">
+  <div class="hero-in">
+    <p class="kicker">Paysagiste · Aix-en-Provence</p>
+    <h1>Des jardins qui vivent <em>avec la Provence</em></h1>
+    <p>Création de jardins méditerranéens, entretien à l'année, arrosage raisonné. Des extérieurs beaux en toute saison — et sobres en eau.</p>
+    <div class="hero-cta">
+      <a class="btn btn-terra" href="#contact">Étude gratuite de votre jardin</a>
+      <a class="btn" style="border:1.5px solid rgba(255,255,255,.5); color:#fff;" href="#prestas">Nos prestations</a>
+    </div>
+  </div>
+</div>
+
+<div class="credit-band">
+  Entretien de jardin : −50 % grâce au crédit d'impôt services à la personne
+  <small>Nous sommes agréés SAP : 60 € d'entretien ne vous coûtent réellement que 30 €.</small>
+</div>
+
+<section class="prestas wrap" id="prestas">
+  <p class="kicker">Prestations</p>
+  <h2>Du premier croquis à la tonte du dimanche</h2>
+  <div class="p-grid">
+    <div class="presta">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20c2-8 6-12 16-16-2 10-6 14-16 16z" stroke="#3D5A3C" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+      <h3>Création de jardin</h3>
+      <p>Conception sur plan, terrassement, plantations d'essences méditerranéennes, éclairage extérieur.</p>
+      <span class="prix">Étude et croquis offerts</span>
+    </div>
+    <div class="presta">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="#3D5A3C" stroke-width="1.7"/><path d="M12 4v16M4 12h16" stroke="#3D5A3C" stroke-width="1.7"/></svg></div>
+      <h3>Entretien à l'année</h3>
+      <p>Tonte, taille, désherbage, soins des massifs : contrat mensuel, jardin impeccable toute l'année.</p>
+      <span class="prix">Dès 89 €/mois — soit 44,50 € après crédit d'impôt</span>
+    </div>
+    <div class="presta">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c3 4.5 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 3-6.5 6-11z" stroke="#3D5A3C" stroke-width="1.7"/></svg></div>
+      <h3>Arrosage automatique</h3>
+      <p>Goutte-à-goutte et programmateurs connectés : moins d'eau, des plantes en meilleure santé.</p>
+      <span class="prix">Installation dès 690 €</span>
+    </div>
+    <div class="presta">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 21V9l6-5 6 5v12" stroke="#3D5A3C" stroke-width="1.7" stroke-linejoin="round"/><path d="M3 21h18" stroke="#3D5A3C" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+      <h3>Terrasses &amp; allées</h3>
+      <p>Pierre naturelle, bois, gravier stabilisé : des extérieurs à vivre, posés dans les règles de l'art.</p>
+      <span class="prix">Sur devis — chiffrage sous 72 h</span>
+    </div>
+    <div class="presta">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21V8M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 12c0-2.5-1.7-4-4-4 0 2.5 1.7 4 4 4z" stroke="#3D5A3C" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+      <h3>Taille &amp; élagage doux</h3>
+      <p>Oliviers, fruitiers, haies : tailles respectueuses des saisons et de la santé de l'arbre.</p>
+      <span class="prix">Olivier taillé dès 75 €</span>
+    </div>
+    <div class="presta">
+      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="1.5" stroke="#3D5A3C" stroke-width="1.7"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#3D5A3C" stroke-width="1.7"/></svg></div>
+      <h3>Potager &amp; verger</h3>
+      <p>Carrés potagers, plantation de fruitiers, conseils de culture : mangez votre jardin.</p>
+      <span class="prix">Carré potager installé dès 240 €</span>
+    </div>
+  </div>
+</section>
+
+<section class="philo">
+  <div class="wrap">
+    <p class="kicker">Notre approche</p>
+    <h2>Jardiner ici, pas contre ici</h2>
+    <p>Un jardin provençal n'est pas une pelouse anglaise sous perfusion. Nous composons avec le climat — essences locales, paillage, arrosage raisonné — pour des jardins qui traversent l'été sans souffrir, et des factures d'eau qui restent douces.</p>
+    <div class="philo-points">
+      <div><b>Zéro pesticide</b>Désherbage mécanique et paillage, auxiliaires plutôt que produits.</div>
+      <div><b>Essences locales</b>Oliviers, lavandes, cistes, gaura : belles et sobres en eau.</div>
+      <div><b>Déchets valorisés</b>Broyat réutilisé en paillage, déchets verts compostés en filière locale.</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="kicker">Avis clients</p>
+  <h2>Des jardins heureux</h2>
+  <div class="avis-grid">
+    <div class="avis"><div class="stars">★★★★★</div><p>« Jardin créé de zéro autour de notre piscine : deux ans après, c'est encore plus beau que le plan. Arrosage réglé au millimètre. »</p><b>Hélène et Marc — Aix, Les Pinchinats</b></div>
+    <div class="avis"><div class="stars">★★★★★</div><p>« Contrat d'entretien depuis trois ans. Équipe fiable, ponctuelle, de bon conseil. Et le crédit d'impôt simplifie tout. »</p><b>Jacques R. — Éguilles</b></div>
+    <div class="avis"><div class="stars">★★★★★</div><p>« Nos trois oliviers centenaires taillés avec un respect rare. On sent le métier et l'amour des arbres. »</p><b>Famille Blanc — Venelles</b></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker">Contact</p>
+    <h2>Parlons de votre jardin</h2>
+    <div class="c-grid">
+      <div class="c-card">
+        <h3>Les Jardins d'Arsène</h3>
+        <div class="c-row"><b>Téléphone</b><span><a href="tel:+33639983281">06 39 98 32 81</a> — lun.–sam. 8 h – 19 h</span></div>
+        <div class="c-row"><b>E-mail</b><span>contact@jardins-arsene.fr</span></div>
+        <div class="c-row"><b>Adresse</b><span>420 chemin des Restanques, 13100 Aix-en-Provence</span></div>
+        <div class="c-row"><b>SIRET</b><span>521 764 380 00017 — agrément SAP</span></div>
+        <p style="margin-top:12px; font-size:.9rem; color:var(--ink-2);">Zone d'intervention :</p>
+        <div class="communes"><span>Aix-en-Provence</span><span>Venelles</span><span>Éguilles</span><span>Le Tholonet</span><span>Fuveau</span><span>Bouc-Bel-Air</span><span>Cabriès</span><span>Puyricard</span></div>
+      </div>
+      <div class="c-card">
+        <h3>Décrivez votre projet</h3>
+        <form onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;color:var(--vert-deep);font-weight:700;&quot;>Merci ! Nous vous rappelons sous 24 h pour convenir d'une visite.</p>';">
+          <label for="nom">Votre nom</label><input id="nom" name="nom" required autocomplete="name">
+          <label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" required autocomplete="tel">
+          <label for="msg">Votre jardin</label><textarea id="msg" name="msg" rows="3" placeholder="Ex. : 800 m², création complète avec terrasse et arrosage…"></textarea>
+          <button class="btn btn-terra" type="submit" style="border:0; cursor:pointer; width:100%; font: inherit; font-weight:700;">Demander une visite gratuite</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Les Jardins d'Arsène — Aix-en-Provence</span>
+    <span>Création · Entretien · Arrosage · Terrasses</span>
+  </div>
+</footer>
+<div class="demo-note">Site fictif de démonstration — réalisé par <a href="../">Vitrine48h</a> · votre site comme celui-ci : 249 €, livré en 48 h</div>
+
+</body>
+</html>
